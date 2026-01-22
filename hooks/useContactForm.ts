@@ -43,6 +43,7 @@ export function useContactForm() {
 
       setSuccess(true)
       setData({ name: "", email: "", phone: "", message: "" })
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       setError("Algo correu mal. Tenta outra vez.")
     } finally {

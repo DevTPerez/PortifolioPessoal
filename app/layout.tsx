@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.svg"
+    icon: "/favicon.svg",
   },
   description:
     "O Grupo FIR atua em todas as frentes do retalho, oferecendo soluções em tecnologia, montagem, logística e produção de mobiliário comercial.",

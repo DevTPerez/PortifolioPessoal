@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Header />
 
-      <main>
+      <main className="bg-back">
         <h1 className="sr-only">
           Soluções em tecnologia, montagem e logística para o retalho
         </h1>
