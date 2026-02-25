@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from 'next/font/google'
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,31 +13,50 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',       
+})
+
 export const metadata: Metadata = {
   title: {
-    default: "Grupo FIR — Tecnologia, Montagem e Logística para o Retalho",
-    template: "%s | Grupo FIR",
+    default: "Tiago Costa - Desenvolvedor Full-Stack em Portugal | SaaS, Apps e Sistemas Sob Medida",
+    template: "%s | Tiago Costa",
   },
 
-  icons: {
-    icon: "/favicon.svg",
-  },
   description:
-    "O Grupo FIR atua em todas as frentes do retalho, oferecendo soluções em tecnologia, montagem, logística e produção de mobiliário comercial.",
-  metadataBase: new URL("https://grupofir.pt"),
+    "Desenvolvimento de sistemas web, aplicativos Android, SaaS e soluções digitais sob medida. Integração com hardware, dashboards e plataformas escaláveis para empresas.",
+
+  metadataBase: new URL("https://tiagocosta.tech"),
+
   alternates: {
     canonical: "/",
   },
+
+  keywords: [
+    "desenvolvedor full stack portugal",
+    "criar sistema sob medida",
+    "desenvolvimento SaaS",
+    "app android empresarial",
+    "software personalizado empresas",
+    "digital signage software",
+    "custom software development",
+    "enterprise SaaS",
+    "android business app",
+    "bespoke digital solutions"
+  ],
+
   openGraph: {
-    title: "Grupo FIR — Tecnologia, Montagem e Logística para o Retalho",
+    title: "Desenvolvedor Full-Stack | SaaS, Apps e Sistemas Sob Medida",
     description:
-      "Soluções completas para o retalho: tecnologia, montagem, logística e mobiliário comercial.",
-    url: "https://grupofir.pt",
-    siteName: "Grupo FIR",
+      "Transformo ideias em plataformas digitais reais: SaaS, apps Android, dashboards e integrações hardware.",
+    url: "https://tiagocosta.tech",
+    siteName: "Tiago Costa",
     locale: "pt_PT",
     type: "website",
   },
-}
+  
+};
 
 
 export default function RootLayout({
@@ -47,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="pt-PT">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${inter.variable} antialiased`}
       >
         {children}
       </body>

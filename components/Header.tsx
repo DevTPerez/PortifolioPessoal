@@ -1,47 +1,37 @@
-"use client"
-import Image from "next/image"
-import logo from "@/assets/logos/logoFir.svg"
-import menu from "@/assets/icons/menu.svg"
+'use client'
 
-export default function Header() {
+import { usePathname } from 'next/navigation'
+import { JSX } from 'react'
+
+export default function Header(): JSX.Element {
+  const pathname = usePathname() ?? ''
+
   return (
-    <header className="backdrop-blur-lg bg-[#00000080] border-b border-[#ffffff]/10 sticky top-0 left-0 w-full z-50">
-        <div className="flex flex-row h-full max-h-[105px] text-white items-center justify-between px-15 py-6">
-            <div 
-                className="w-[132px] h-[44px]  relative"
-                onClick={() =>
-                    window.scrollTo({ top: 0, behavior: "smooth" })
-                }
+    <div className='sticky z-20 top-0 w-full lg:px-[20px] mx-auto '>
+        <div className='w-full mx-auto bg-[#0A0A0A]'>
+          <nav className="bg-[#0a0a0a] text-white flex justify-center items-center gap-[40px] py-[17px] h-[60px] ">
+            <a
+              href="/pt"
+              className={`transition-all duration-200 ${
+                pathname.startsWith('/pt')
+                  ? 'font-bold text-white border-white'
+                  : 'font-normal text-[#555555]'
+              }`}
             >
-                <Image
-                src={logo}
-                alt="FirGroup Logo"
-                fill
-                style={{ objectFit: "contain" }}
-                />
-            </div>
-            <div>
-                <h2 className="text-[35px] font-light tracking-[0.2em] hidden md:block ">
-                GRUPO <span className="font-bold  tracking-tighter">FIR</span>
-                </h2>
-            </div>
-            <a href="#contacts" className="flex justify-center items-center text-center w-full max-w-[60px] md:max-w-[124px] h-[58px]  rounded-xl bg-white text-black font-semibold hover:bg-[rgb(230,230,230)] transition">
-                <div 
-                    className="w-[24px] h-[24px]  relative block md:hidden"
-                    onClick={() =>
-                        window.scrollTo({ top: 0, behavior: "smooth" })
-                    }
-                >
-                    <Image
-                    src={menu}
-                    alt="FirGroup Logo"
-                    fill
-                    style={{ objectFit: "contain" }}
-                    />
-                </div>
-                <p className="hidden md:block">Contactos</p>
+              PT
             </a>
+            <a
+              href="/en"
+              className={`transition-all duration-200 ${
+                pathname.startsWith('/en')
+                  ? 'font-bold text-white border-white'
+                  : 'font-normal text-[#555555]'
+              }`}
+            >
+              EN
+            </a>
+          </nav>
         </div>
-    </header>
+    </div>
   )
-}
+}20
