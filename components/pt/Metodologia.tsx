@@ -73,7 +73,7 @@ export default function Metodologia() {
                       z-0
                     `}
                   >
-                    <p className="text-[16px] max-w-[180px]">{item.description}</p>
+                    <p className="text-[16px] text-[#fff] max-w-[180px]">{item.description}</p>
                   </div>
                   <div
                     className={`
@@ -81,7 +81,7 @@ export default function Metodologia() {
                       ${isActive ? "blur-[10px]" : "group-hover:blur-[10px]"} z-0
                     `}
                   >
-                    <h3 className="font-bold md:text-[22px] max-w-[180px]">{item.title}</h3>
+                    <h3 className="font-bold md:text-[22px] text-[#fff] max-w-[180px]">{item.title}</h3>
                   </div>
                 </div>
               </div>
