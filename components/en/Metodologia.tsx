@@ -41,7 +41,7 @@ export default function Methodology() {
         <section className="bg-[#0A0A0A] flex w-full max-w-[1440px] mx-auto z-20">
       <div className="bg-[#0A0A0A] w-full flex flex-col py-[80px] px-[30px] z-20">
         <h2 className="text-[24px] md:text-[26px] lg:text-[30px] font-bold text-white mb-10">
-          my approach
+          My approach
         </h2>
 
         <div className="relative w-full flex flex-wrap gap-8 justify-center md:justify-between">

@@ -36,7 +36,7 @@ const imgs: {
       <p>
         Organização inteligente do fluxo de clientes
         <br /> → Gestão de filas e prioridades
-        <br /> → chamada em tempo real
+        <br /> → Chamada em tempo real
         <br /> → Redução do tempo de espera
         <br /> → Monitorização centralizada
       </p>
