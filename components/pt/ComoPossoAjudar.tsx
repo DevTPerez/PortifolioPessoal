@@ -1,6 +1,6 @@
 "use client"
 import { LayoutDashboard, Tablet, CloudCog, Cpu } from "lucide-react"
-import { JSX } from "react"
+import { JSX, useState } from "react"
 
 const icons: { icon: JSX.Element; title: string; description: string }[] = [
     {
@@ -27,6 +27,13 @@ const icons: { icon: JSX.Element; title: string; description: string }[] = [
 ];
 
 export default function ComoPossoAjudar() {
+      const [activeIndex, setActiveIndex] = useState<number | null>(null)
+    
+      const handleToggle = (index: number) => {
+        setActiveIndex(activeIndex === index ? null : index)
+      }
+    
+
     return (
         <section className="bg-[#0A0A0A] lg:px-[20px]">
             <div className="relative text-white flex w-full bg-[#0A0A0A] transition-all duration-300 ease-in-out py-[80px]">
@@ -35,16 +42,24 @@ export default function ComoPossoAjudar() {
                     <h2 className="text-[24px]  md:text-[26px] lg:text-[30px] font-bold">Como posso ajudar! </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-[30px] w-full">
-                        {icons.map(({ icon, title, description }, i) => (
-                        <div key={i} className="flex flex-col items-start gap-[20px] p-[5px] rounded-[15px] min-h-[240px]
-                            transition-all duration-300 ease-out
-                            hover:-translate-y-3 hover:shadow-[1px_9px_10px_#000]
-                        ">
-                            <div className="w-[40px] h-[40px]">{icon}</div>
-                            <h3 className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] ">{title}</h3>
-                            <p className="text-[14px] lg:text-[18px] font-light text-[#777777] max-w-[480px] max-h-[150px]">{description}</p>
-                        </div>
-                        ))}
+                        {icons.map(({ icon, title, description }, i) => {
+                            const isActive = activeIndex === i
+                            return (
+                            <div key={i} 
+                                className={`
+                                    flex flex-col items-start gap-[20px] p-[15px] rounded-[15px] min-h-[240px]
+                                    transition-all duration-300 ease-out
+                                    cursor-pointer
+                                    ${isActive ? "translate-y-[-12px] shadow-[0_10px_15px_rgba(0,0,0,0.5)]" : "hover:-translate-y-3 hover:shadow-[1px_9px_10px_#000]"}
+                                `}
+                                onClick={() => handleToggle(i)}
+                                >
+                                <div className="w-[40px] h-[40px]">{icon}</div>
+                                <h3 className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] ">{title}</h3>
+                                <p className="text-[14px] lg:text-[18px] font-light text-[#777777] max-w-[480px] max-h-[150px]">{description}</p>
+                            </div>
+                            )
+                        })}
                     </div>
 
                 </div>

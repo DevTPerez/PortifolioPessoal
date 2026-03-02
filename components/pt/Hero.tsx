@@ -42,8 +42,6 @@ const btnContainer = {
                 lg:h-[766px]      
                 
             ">
-                
-                {/* IMAGE */}
                 <motion.img
                 variants={imageVariant}
                 initial="hidden"
@@ -54,8 +52,6 @@ const btnContainer = {
                 <div className="w-full h-full absolute inset-0 backdrop-blur-[5px] to-transparent">
 
                 </div>
-
-                    {/* TEXT */}
                     <motion.div
                         variants={textContainer}
                         initial="hidden"
@@ -74,8 +70,6 @@ const btnContainer = {
                     >
                         Transformo ideias em soluções digitais funcionais
                     </motion.h2>
-
-                    {/* PARÁGRAFOS */}
                     <motion.p
                         variants={textItem}
                         className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] mb-2 sm:mb-3 md:mb-4 lg:mb-2"
@@ -88,10 +82,7 @@ const btnContainer = {
                         className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] mb-4 sm:mb-5 md:mb-6 lg:mb-6"
                     >
                         Do conceito à entrega, soluções rápidas, robustas e escaláveis para o seu negócio.
-                    </motion.p>
-
-                    {/* BOTÕES LADO A LADO */}
-                
+                    </motion.p>      
                     <motion.div
                         variants={btnContainer}
                         initial="hidden"

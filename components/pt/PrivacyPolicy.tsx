@@ -77,7 +77,7 @@ export default function PrivacyPolicy({ onClose }: { onClose: () => void }) {
 
                 <p className={`${subT} mt-[20px]`}>9. Direitos dos Titulares</p>
                 <p>
-                    O titular pode, a qualquer momento, solicitar acesso, retificação, apagamento ou limitação do tratamento dos seus dados, bem como retirar o consentimento. As solicitações devem ser enviadas para <span className="underline">hello@tiagocosta.tech</span>.
+                    O titular pode, a qualquer momento, solicitar acesso, retificação, apagamento ou limitação do tratamento dos seus dados, bem como retirar o consentimento. As solicitações devem ser enviadas para <span className="underline">perez@tiagocosta.tech</span>.
                 </p>
 
                 <p className={`${subT} mt-[20px]`}>10. Cookies</p>

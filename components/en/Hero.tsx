@@ -38,8 +38,6 @@ const btnContainer = {
                 md:h-[700px]       
                 lg:h-[766px]      
             ">
-                
-                {/* IMAGE */}
                 <motion.img
                 variants={imageVariant}
                 initial="hidden"
@@ -49,15 +47,12 @@ const btnContainer = {
                 />
                 <div className="w-full h-full absolute inset-0 backdrop-blur-[5px] to-transparent">
                 </div>
-
-                    {/* TEXT */}
                     <motion.div
                         variants={textContainer}
                         initial="hidden"
                         animate="show"
                         className="relative z-10 flex flex-col items-center justify-center h-full mx-auto max-w-[1000px] text-center px-2 "
                     >
-                    {/* HEADLINE */}
                     <motion.h2
                         variants={textItem}
                         className="
@@ -69,8 +64,6 @@ const btnContainer = {
                     >
                         I transform ideas into functional digital solutions
                     </motion.h2>
-
-                    {/* PARAGRAPHS */}
                     <motion.p
                         variants={textItem}
                         className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] mb-2 sm:mb-3 md:mb-4 lg:mb-2"
@@ -84,8 +77,6 @@ const btnContainer = {
                     >
                         From concept to delivery, fast, robust, and scalable solutions for your business.
                     </motion.p>
-
-                    {/* SIDE-BY-SIDE BUTTONS */}
                     <motion.div
                         variants={btnContainer}
                         initial="hidden"

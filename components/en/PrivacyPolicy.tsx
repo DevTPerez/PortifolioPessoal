@@ -77,7 +77,7 @@ export default function PrivacyPolicy({ onClose }: { onClose: () => void }) {
 
                 <p className={`${subT} mt-[20px]`}>9. Data Subject Rights</p>
                 <p>
-                    Data subjects may request access, correction, deletion, or limitation of their data at any time, as well as withdraw consent. Requests should be sent to <span className="underline">hello@tiagocosta.tech</span>.
+                    Data subjects may request access, correction, deletion, or limitation of their data at any time, as well as withdraw consent. Requests should be sent to <span className="underline">perez@tiagocosta.tech</span>.
                 </p>
 
                 <p className={`${subT} mt-[20px]`}>10. Cookies</p>

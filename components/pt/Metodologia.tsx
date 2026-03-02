@@ -1,117 +1,94 @@
 "use client"
-import { JSX } from "react"
-import { Radar, Network, Layers, Timer, RefreshCcw  } from "lucide-react"
+import { JSX, useState } from "react"
+import { Radar, Network, Layers, Timer, RefreshCcw } from "lucide-react"
 
 const icons: { icon: JSX.Element; title: string; description: string }[] = [
-    {
-        icon: <Radar size={100}  className="text-[#777777] mx-auto"/>,
-        title: "Diagnóstico  estratégico",
-        description: "Análise do negócio para identificar necessidades, prioridades e oportunidades reais."
-    },
-    {
-        icon: <Network size={100} className="text-[#777777] mx-auto" />,
-        title: "Arquitetura da solução",
-        description: "Planejamento técnico que garante performance, estabilidade e escalabilidade."
-    },
-    {
-        icon: <Layers size={100} className="text-[#777777] mx-auto" />,
-        title: "Construção incremental",
-        description: "Desenvolvimento em ciclos curtos, com entregas contínuas e evolução progressiva."
-    },
-    {
-        icon: <Timer size={100} className="text-[#777777] mx-auto" />,
-        title: "Agilidade na entrega",
-        description: "Fluxo otimizado que acelera a execução sem comprometer qualidade."
-    },
-    {
-        icon: <RefreshCcw size={100} className="text-[#777777] mx-auto" />,
-        title: "Melhora contínua",
-        description: "Melhorias constantes baseadas em dados, uso real e novas oportunidades de negócio."
-    }
-
-];
+  {
+    icon: <Radar size={100} className="text-[#777777] mx-auto" />,
+    title: "Diagnóstico estratégico",
+    description: "Análise do negócio para identificar necessidades, prioridades e oportunidades reais."
+  },
+  {
+    icon: <Network size={100} className="text-[#777777] mx-auto" />,
+    title: "Arquitetura da solução",
+    description: "Planejamento técnico que garante performance, estabilidade e escalabilidade."
+  },
+  {
+    icon: <Layers size={100} className="text-[#777777] mx-auto" />,
+    title: "Construção incremental",
+    description: "Desenvolvimento em ciclos curtos, com entregas contínuas e evolução progressiva."
+  },
+  {
+    icon: <Timer size={100} className="text-[#777777] mx-auto" />,
+    title: "Agilidade na entrega",
+    description: "Fluxo otimizado que acelera a execução sem comprometer qualidade."
+  },
+  {
+    icon: <RefreshCcw size={100} className="text-[#777777] mx-auto" />,
+    title: "Melhora contínua",
+    description: "Melhorias constantes baseadas em dados, uso real e novas oportunidades de negócio."
+  }
+]
 
 export default function Metodologia() {
-    return (
-        <section className="bg-[#0A0A0A] flex w-full max-w-[1440px] mx-auto z-20">
-            <div className="bg-[#0A0A0A] w-fullflex flex-col py-[80px] px-[30px] z-20" >
-                <h2 className="text-[24px] md:text-[26px] lg:text-[30px] font-bold bg-[#0A0A0A]" >Minha abordagem</h2>
-                <div className="
-                    relative text-white flex w-full bg-[#0A0A0A] transition-all duration-300 ease-in-out justify-between 
-                ">
-                
-                    <div
-                        className="
-                            w-full flex mx-auto itens-center justify-center transition-all duration-300 
-                            flex flex-wrap gap-8
-                            md:justify-between
-                            gap-y-10
-                    "
-                    >
-                
-                        {icons.map((item) => (
-                            
-                            <div 
-                                 key={item.title}
-                                className="cursor-pointer h-[250] w-[250px] my-auto"
-                            >
-                                <div
-                                    
-                                    className="bg-[#0A0A0A] relative flex flex-col text-center items-center
-                                        w-full h-full max-w-[293px] max-h-[350px]
-                                        my-auto p-[10px] rounded-[20px]
-                                        transition-transform duration-300
-                                        active:scale-90
-                                        group"
-                                >
-                                    <div
-                                        className="
-                                            absolute top-1/2 -translate-y-2/3
-                                            transition-all duration-300
-                                            group-hover:-translate-y-[150px]
-                                            group-hover:blur-[10px]
-                                            will-change-transform
-                                            z-0
-                                        "
-                                    >
-                                        {item.icon}
-                                    </div>
-                                    <div
-                                        className="
-                                            absolute top-1/2 -translate-y-1/2
-                                            opacity-0
-                                            scale-50
-                                            transition-all duration-300
-                                            group-hover:opacity-100
-                                            group-hover:scale-100
-                                            z-0
-                                            
-                                        "
-                                    >
-                                        <p className="text-[16px] max-w-[180px]">
-                                            {item.description}
-                                        </p>
-                                    </div>
-                                    <div
-                                        className="
-                                            mt-auto flex flex-col
-                                            transition-all duration-300
-                                            group-hover:blur-[10px]
-                                            z-0
-                                        "
-                                    >
-                                        <h3 className="font-bold md:text-[22px] max-w-[180px]">
-                                            {item.title}
-                                        </h3>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                
+  const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
+  const handleToggle = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index)
+  }
+
+  return (
+    <section className="bg-[#0A0A0A] flex w-full max-w-[1440px] mx-auto z-20">
+      <div className="bg-[#0A0A0A] w-full flex flex-col py-[80px] px-[30px] z-20">
+        <h2 className="text-[24px] md:text-[26px] lg:text-[30px] font-bold text-white mb-10">
+          Minha abordagem
+        </h2>
+
+        <div className="relative w-full flex flex-wrap gap-8 justify-center md:justify-between">
+          {icons.map((item, idx) => {
+            const isActive = activeIndex === idx
+
+            return (
+              <div
+                key={item.title}
+                className="cursor-pointer w-[250px] h-[250px] md:h-[350px] relative"
+                onClick={() => handleToggle(idx)}
+              >
+                <div
+                  className={`group flex flex-col items-center text-center w-full h-full max-w-[293px] max-h-[350px] p-[10px] rounded-[20px] transition-transform duration-300 active:scale-90`}
+                >
+                  <div
+                    className={`
+                      absolute top-1/2 -translate-y-2/3 transition-all duration-300
+                      ${isActive ? "-translate-y-[150px] blur-[10px]" : "group-hover:-translate-y-[150px] group-hover:blur-[10px]"}
+                      will-change-transform z-0
+                    `}
+                  >
+                    {item.icon}
+                  </div>
+                  <div
+                    className={`
+                      absolute top-1/2 -translate-y-1/2 transition-all duration-300
+                      ${isActive ? "opacity-100 scale-100" : "opacity-0 scale-50 group-hover:opacity-100 group-hover:scale-100"}
+                      z-0
+                    `}
+                  >
+                    <p className="text-[16px] max-w-[180px]">{item.description}</p>
+                  </div>
+                  <div
+                    className={`
+                      mt-auto flex flex-col transition-all duration-300
+                      ${isActive ? "blur-[10px]" : "group-hover:blur-[10px]"} z-0
+                    `}
+                  >
+                    <h3 className="font-bold md:text-[22px] max-w-[180px]">{item.title}</h3>
+                  </div>
                 </div>
-            </div>
-            
-        </section>
-    )
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    </section>
+  )
 }
