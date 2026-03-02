@@ -7,7 +7,7 @@ export default function Header(): JSX.Element {
   const pathname = usePathname() ?? ''
 
   return (
-    <div className='sticky z-20 top-0 w-full lg:px-[20px] mx-auto '>
+    <div className='sticky z-50 top-0 w-full lg:px-[20px] mx-auto '>
         <div className='w-full mx-auto bg-[#0A0A0A]'>
           <nav className="bg-[#0a0a0a] text-white flex justify-center items-center gap-[40px] py-[17px] h-[60px] ">
             <a
@@ -34,4 +34,4 @@ export default function Header(): JSX.Element {
         </div>
     </div>
   )
-}20
+}

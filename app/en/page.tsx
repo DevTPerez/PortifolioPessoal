@@ -1,8 +1,14 @@
-import Hero from "@/components/pt/Hero"
 import Header from "@/components/Header"
-import FirCards from "@/components/pt/Tecnologias"
-import Contacts from "@/components/pt/Contacts"
+import Hero from "@/components/en/Hero"
+import Credibilidade from "@/components/en/Credibilidade"
+import Tecnologias from "@/components/en/Tecnologias"
+import ComoPossoAjudar from "@/components/en/ComoPossoAjudar"
+import Metodologias from "@/components/en/Metodologia"
+import Contacts from "@/components/en/Contacts"
+import MeusProdustos from "@/components/en/MeusProdutos"
+import PorqueEu from "@/components/en/PorqueEu"
 import Footer from "@/components/Footer"
+import "../globals.css"
 
 
 export default function Home() {
@@ -10,13 +16,18 @@ export default function Home() {
     <>
       <Header />
 
-      <main className="bg-back">
-        <h1 className="sr-only">
-          Custom Systems, Apps, and Digital Platform Development
+      <main className="bg-back m-0 lg:px-[20px]">
+        <h1 className="sr-only ">
+          Desenvolvimento de Sistemas, Apps e Plataformas Digitais Sob Medida
         </h1>
 
         <Hero />
-        <FirCards />
+        <Credibilidade />
+        <Tecnologias />
+        <ComoPossoAjudar />
+        <Metodologias />
+        <MeusProdustos />
+        <PorqueEu />
         <Contacts />
       </main>
 

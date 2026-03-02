@@ -1,74 +1,99 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Inter } from 'next/font/google'
+import { Geist } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',       
-})
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
-export const metadata: Metadata = {
-  title: {
-    default: "Tiago Costa - Desenvolvedor Full-Stack em Portugal | SaaS, Apps e Sistemas Sob Medida",
-    template: "%s | Tiago Costa",
-  },
-
-  description:
-    "Desenvolvimento de sistemas web, aplicativos Android, SaaS e soluções digitais sob medida. Integração com hardware, dashboards e plataformas escaláveis para empresas.",
-
-  metadataBase: new URL("https://tiagocosta.tech"),
-
-  alternates: {
-    canonical: "/",
-  },
-
-  keywords: [
-    "desenvolvedor full stack portugal",
-    "criar sistema sob medida",
-    "desenvolvimento SaaS",
-    "app android empresarial",
-    "software personalizado empresas",
-    "digital signage software",
-    "custom software development",
-    "enterprise SaaS",
-    "android business app",
-    "bespoke digital solutions"
-  ],
-
-  openGraph: {
-    title: "Desenvolvedor Full-Stack | SaaS, Apps e Sistemas Sob Medida",
-    description:
-      "Transformo ideias em plataformas digitais reais: SaaS, apps Android, dashboards e integrações hardware.",
-    url: "https://tiagocosta.tech",
-    siteName: "Tiago Costa",
-    locale: "pt_PT",
-    type: "website",
-  },
-  
+type Props = {
+  children: React.ReactNode;
+  params: { lang: string };
 };
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const isPT = params.lang === "pt";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  return {
+    metadataBase: new URL("https://tiagocosta.tech"),
+
+    
+
+    title: {
+      default: isPT
+        ? "Tiago Costa - Desenvolvedor Full-Stack em Portugal | SaaS, Apps e Sistemas Sob Medida"
+        : "Tiago Costa - Full-Stack Developer in Portugal | SaaS, Apps & Custom Systems",
+      template: "%s | Tiago Costa",
+    },
+
+    description: isPT
+      ? "Desenvolvimento de sistemas web, aplicativos Android, SaaS e soluções digitais sob medida. Integração com hardware, dashboards e plataformas escaláveis para empresas."
+      : "Custom web systems, Android apps, SaaS platforms and scalable digital solutions for companies.",
+
+    alternates: {
+      canonical: `/${params.lang}`,
+      languages: {
+        "pt-PT": "/pt",
+        en: "/en",
+      },
+    },
+
+    icons: {
+      icon: '/favicon.png'
+    },
+
+    keywords: [
+      "desenvolvedor full stack portugal",
+      "criar sistema sob medida",
+      "desenvolvimento SaaS",
+      "app android empresarial",
+      "software personalizado empresas",
+      "digital signage software",
+      "custom software development",
+      "enterprise SaaS",
+      "android business app",
+      "bespoke digital solutions",
+    ],
+
+    openGraph: {
+      title: isPT
+        ? "Desenvolvedor Full-Stack | SaaS, Apps e Sistemas Sob Medida"
+        : "Full-Stack Developer | SaaS, Apps & Custom Systems",
+      description: isPT
+        ? "Transformo ideias em plataformas digitais reais: SaaS, apps Android, dashboards e integrações hardware."
+        : "I build real digital platforms: SaaS, Android apps, dashboards and hardware integrations.",
+      url: `https://tiagocosta.tech/${params.lang}`,
+      siteName: "Tiago Costa",
+      locale: isPT ? "pt_PT" : "en_US",
+      type: "website",
+    },
+
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
+}
+
+export default function RootLayout({ children, params }: Props) {
+  const lang = params.lang === "pt" ? "pt-PT" : "en";
+
   return (
-    <html lang="pt-PT">
-      <body
-        className={`${geistSans.variable} ${inter.variable} antialiased`}
-      >
+    <html lang={lang}>
+      <head>
+        <link rel="icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
+      </head>
+      <body className={`${geistSans.variable} ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>

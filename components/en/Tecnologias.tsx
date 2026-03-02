@@ -16,17 +16,19 @@ const icons: JSX.Element[] = [
   <Plug key="APIs" className="w-[100px] h-[100px] text-[#777777]" />,
 ]
 
-export default function Tecnologia() {
+export default function Technology() {
   const iconsLoop = [...icons, ...icons]
 
     return (
         <section className="bg-[#0A0A0A] lg:px-[50px] ">
             <div className="relative text-white flex flex-col w-full max-w-[1440px] mx-auto gap-[60px] overflow-x-hidden bg-[#0A0A0A] py-[80px]">
-                <h2 className="text-[24px] md:text-[26px] lg:text-[30px] font-bold  ml-[30px] bg-[#0A0A0A]">Principais tecnologias</h2>
+                <h2 className="text-[24px] md:text-[26px] lg:text-[30px] font-bold ml-[30px] bg-[#0A0A0A]">
+                    Main Technologies
+                </h2>
 
                 <div className="overflow-hidden w-full bg-[#0A0A0A]">
                 <motion.div
-                    className="flex gap-[100px] w-max pr-[30px]  "
+                    className="flex gap-[100px] w-max pr-[30px]"
                     animate={{ x: ["0%", "-51%"] }}
                     transition={{
                     ease: "linear",
@@ -42,7 +44,6 @@ export default function Tecnologia() {
                         {icon}
                         {icon.key}
                     </div>
-                    
                     ))}
                 </motion.div>
                 </div>

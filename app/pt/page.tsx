@@ -5,6 +5,8 @@ import Tecnologias from "@/components/pt/Tecnologias"
 import ComoPossoAjudar from "@/components/pt/ComoPossoAjudar"
 import Metodologias from "@/components/pt/Metodologia"
 import Contacts from "@/components/pt/Contacts"
+import MeusProdustos from "@/components/pt/MeusProdutos"
+import PorqueEu from "@/components/pt/PorqueEu"
 import Footer from "@/components/Footer"
 import "../globals.css"
 
@@ -24,6 +26,8 @@ export default function Home() {
         <Tecnologias />
         <ComoPossoAjudar />
         <Metodologias />
+        <MeusProdustos />
+        <PorqueEu />
         <Contacts />
       </main>
 

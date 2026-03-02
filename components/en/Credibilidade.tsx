@@ -11,7 +11,7 @@ const textH3= {
     show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
 } as const
 
-export default function Credibilidade() {
+export default function Credibility() {
     return (
         <section className="bg-[#0A0A0A] lg:px-[20px]">
             <div className="
@@ -26,7 +26,7 @@ export default function Credibilidade() {
                         className="text-[24px] md:text-[26px] lg:text-[30px] font-bold"
                         viewport={{ once: true, amount: 0.3 }}
                     >
-                        Credibilidade & Inovação
+                        Credibility & Innovation
                     </motion.h2>
 
                     <motion.div
@@ -37,21 +37,20 @@ export default function Credibilidade() {
                         className="text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] text-[#777777] flex flex-col gap-[30px] leading-tight"
                     >
                         <motion.h3 variants={textH3}>
-                        Arquitetura de soluções digitais<br />
-                        → foco em performance e escalabilidade
+                            Digital solutions architecture<br />
+                            → focus on performance and scalability
                         </motion.h3>
 
                         <motion.h3 variants={textH3}>
-                        Desenvolvimento sob medida<br />
-                        → web, Android e integrações
+                            Custom development<br />
+                            → web, Android, and integrations
                         </motion.h3>
 
                         <motion.h3 variants={textH3}>
-                        Parceria técnica<br />
-                        → startups e empresas em crescimento
+                            Technical partnership<br />
+                            → startups and growing companies
                         </motion.h3>
                     </motion.div>
-
 
                 </div>
                 

@@ -5,23 +5,23 @@ import { JSX } from "react"
 const icons: { icon: JSX.Element; title: string; description: string }[] = [
     {
         icon: <LayoutDashboard size={40} />,
-        title: "Sistemas Web Sob Medida",
-        description: "Agilidade Plataformas, dashboards e sistemas internos desenvolvidos para automatizar processos e escalar operações."
+        title: "Custom Web Systems",
+        description: "Agile platforms, dashboards, and internal systems developed to automate processes and scale operations."
     },
     {
         icon: <Tablet size={40} />,
-        title: "Aplicações Android & Kiosk",
-        description: "Apps nativos para tablets, TV Box e dispositivos dedicados, com operação contínua e integração com hardware."
+        title: "Android & Kiosk Applications",
+        description: "Native apps for tablets, TV Boxes, and dedicated devices, with continuous operation and hardware integration."
     },
     {
         icon: <CloudCog size={40} />,
-        title: "Plataformas SaaS & Painéis de Controle",
-        description: "Soluções com gestão remota, múltiplos usuários, permissões e atualização em tempo real."
+        title: "SaaS Platforms & Control Panels",
+        description: "Solutions with remote management, multiple users, permissions, and real-time updates."
     },
     {
         icon: <Cpu size={40} />,
-        title: "Soluções Técnicas Personalizadas",
-        description: "Projetos especiais que exigem integração entre software, dispositivos e infraestrutura."
+        title: "Custom Technical Solutions",
+        description: "Special projects that require integration between software, devices, and infrastructure."
     }
 
 ];
@@ -30,9 +30,9 @@ export default function ComoPossoAjudar() {
     return (
         <section className="bg-[#0A0A0A] lg:px-[20px]">
             <div className="relative text-white flex w-full bg-[#0A0A0A] transition-all duration-300 ease-in-out py-[80px]">
-                <div className="flex    flex-col bg-[white]/5 w-full max-w-[1440px] py-[60px] px-[30px] mx-auto rounded-[25px] gap-[30px]">
+                <div className="flex flex-col bg-[white]/5 w-full max-w-[1440px] py-[60px] px-[30px] mx-auto rounded-[25px] gap-[30px]">
                     
-                    <h2 className="text-[24px]  md:text-[26px] lg:text-[30px] font-bold">Como posso ajudar! </h2>
+                    <h2 className="text-[24px]  md:text-[26px] lg:text-[30px] font-bold">How Can I Help!</h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-[30px] w-full">
                         {icons.map(({ icon, title, description }, i) => (

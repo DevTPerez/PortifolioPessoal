@@ -1,6 +1,6 @@
 "use client"
 
-import heroImg from "@/assets/images/heroImage.png"
+import heroImg from "@/public/heroImage.png"
 import { motion } from "framer-motion"
 
 export default function Hero() {
