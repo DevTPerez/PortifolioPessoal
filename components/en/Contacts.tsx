@@ -163,7 +163,7 @@ export default function Contacts() {
                                 type="checkbox"
                                 checked={consent}
                                 onChange={(e) => setConsent(e.target.checked)}
-                                className="w-4 h-4 accent-white"
+                                className="w-4 h-4 accent-black"
                             />
                             I have read and agree to the{" "}
                             <p

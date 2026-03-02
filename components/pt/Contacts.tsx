@@ -160,12 +160,12 @@ export default function Contacts() {
                         )}
 
 
-                                                <label className="flex items-center gap-2 text-white/70 text-sm">
+                            <label className="flex items-center gap-2 text-white/70 text-sm">
                             <input
                                 type="checkbox"
                                 checked={consent}
                                 onChange={(e) => setConsent(e.target.checked)}
-                                className="w-4 h-4 accent-white"
+                                className="w-4 h-4 accent-black"
                             />
                             Li e concordo com a{" "}
                             <p
