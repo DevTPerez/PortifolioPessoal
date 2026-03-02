@@ -17,11 +17,12 @@ const inter = Inter({
 
 type Props = {
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<{ lang: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const isPT = params.lang === "pt";
+  const { lang } = await params;
+  const isPT = lang === "pt";
 
   return {
     metadataBase: new URL("https://tiagocosta.tech"),
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : "Custom web systems, Android apps, SaaS platforms and scalable digital solutions for companies.",
 
     alternates: {
-      canonical: `/${params.lang}`,
+      canonical: `/${lang}`,
       languages: {
         "pt-PT": "/pt",
         en: "/en",
@@ -71,7 +72,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: isPT
         ? "Transformo ideias em plataformas digitais reais: SaaS, apps Android, dashboards e integrações hardware."
         : "I build real digital platforms: SaaS, Android apps, dashboards and hardware integrations.",
-      url: `https://tiagocosta.tech/${params.lang}`,
+      url: `https://tiagocosta.tech/${lang}`,
       siteName: "Tiago Costa",
       locale: isPT ? "pt_PT" : "en_US",
       type: "website",
@@ -84,11 +85,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function RootLayout({ children, params }: Props) {
-  const lang = params.lang === "pt" ? "pt-PT" : "en";
+export default async function RootLayout({ children, params }: Props) {
+  const { lang } = await params;
+  const htmlLang = lang === "pt" ? "pt-PT" : "en";
 
   return (
-    <html lang={lang}>
+    <html lang={htmlLang}>
       <head>
         <link rel="icon" href="/favicon.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png" />
