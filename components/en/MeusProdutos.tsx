@@ -131,7 +131,7 @@ export default function MyProducts() {
       id="portfolio"
     >      
       <div className="max-w-[1440px] mx-auto bg-[#0A0A0A] px-[10px] lg:px-[30px]">
-        <h2 className="max-w-[1440px] ml-[30px] md:-ml-0  mb-[80px] text-[24px] md:text-[26px] lg:text-[30px] font-bold bg-[#0A0A0A]" >
+        <h2 className="max-w-[1440px] ml-[30px] md:-ml-0 text-white mb-[80px] text-[24px] md:text-[26px] lg:text-[30px] font-bold bg-[#0A0A0A]" >
           Some Products
         </h2>
         

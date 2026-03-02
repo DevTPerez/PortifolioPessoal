@@ -63,7 +63,7 @@ export default function WorkWithMe() {
       className="bg-[#0A0A0A] z-20 flex relative w-full max-w-[1440px] mx-auto"
     >
       <div className="w-full flex flex-col py-[80px] px-[30px]">
-        <h2 className="text-[24px] md:text-[26px] lg:text-[30px] pb-[60px] font-bold">
+        <h2 className="text-[24px] md:text-[26px] lg:text-[30px] pb-[60px] text-white font-bold">
           Reasons to Work With Me
         </h2>
 
