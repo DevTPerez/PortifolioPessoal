@@ -62,7 +62,7 @@ const btnContainer = {
                         mb-4 sm:mb-5 md:mb-6 lg:mb-6
                         "
                     >
-                        Digital Solutions that Scale Businesses and Deliver Real Results
+                        Digital Solutions that Deliver Results
                     </motion.h2>
                     <motion.p
                         variants={textItem}
