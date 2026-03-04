@@ -201,7 +201,7 @@ export default function MyProducts() {
                   href="#contato"
                   className="
                   px-5 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 lg:px-10 lg:py-4
-                  bg-white text-black
+                  bg-white text-black text-center
                   rounded-full border-[2px] border-black
                   font-semibold
                   text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px]

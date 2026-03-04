@@ -74,14 +74,14 @@ const btnContainer = {
                         variants={textItem}
                         className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] mb-2 sm:mb-3 md:mb-4 lg:mb-2"
                     >
-                        Aplicações web, Android e plataformas sob medida.
+                        Aplicações web, Android e plataformas sob medida
                     </motion.p>
 
                     <motion.p
                         variants={textItem}
                         className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] mb-4 sm:mb-5 md:mb-6 lg:mb-6"
                     >
-                        Explore nossos produtos ou proponha uma parceria estratégica.
+                        Explore nossos produtos ou proponha uma parceria estratégica
                     </motion.p>      
                     <motion.div
                         variants={btnContainer}

@@ -68,7 +68,7 @@ const btnContainer = {
                         variants={textItem}
                         className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] mb-2 sm:mb-3 md:mb-4 lg:mb-2"
                     >
-                        Web, Android apps, and custom platforms.
+                        Web, Android apps, and custom platforms
                     </motion.p>
 
                     <motion.p

@@ -131,7 +131,7 @@ export default function MeusProdutos() {
       id="portfolio"
     >      
       <div className="max-w-[1440px] mx-auto bg-[#0A0A0A] px-[10px] lg:px-[30px]">
-        <h2 className="max-w-[1440px] ml-[30px] md:-ml-0 text-white mb-[80px] text-[24px] md:text-[26px] lg:text-[30px] font-bold bg-[#0A0A0A]" >Alguns produtos</h2>
+        <h2 className="max-w-[1440px] ml-[30px] md:-ml-0 text-white mb-[80px] text-[24px] md:text-[26px] lg:text-[30px] font-bold bg-[#0A0A0A]" >Alguns Produtos</h2>
         
         <motion.div 
           layout
@@ -199,7 +199,7 @@ export default function MeusProdutos() {
                   href="#contato"
                   className="
                   px-5 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 lg:px-10 lg:py-4
-                  bg-white text-black
+                  bg-white text-black text-center
                   rounded-full border-[2px] border-black
                   font-semibold
                   text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px]
