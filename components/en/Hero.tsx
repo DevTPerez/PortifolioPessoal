@@ -57,12 +57,12 @@ const btnContainer = {
                         variants={textItem}
                         className="
                         text-center
-                        text-[24px] sm:text-[26px] md:text-[32px] lg:text-[40px]
+                        text-[24px] sm:text-[28px] md:text-[32px] lg:text-[48px]
                         leading-tight font-bold
                         mb-4 sm:mb-5 md:mb-6 lg:mb-6
                         "
                     >
-                        I transform ideas into functional digital solutions
+                        Digital Solutions that Scale Businesses and Deliver Real Results
                     </motion.h2>
                     <motion.p
                         variants={textItem}
@@ -75,13 +75,13 @@ const btnContainer = {
                         variants={textItem}
                         className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] mb-4 sm:mb-5 md:mb-6 lg:mb-6"
                     >
-                        From concept to delivery, fast, robust, and scalable solutions for your business.
+                        Explore our products or propose a strategic partnership
                     </motion.p>
                     <motion.div
                         variants={btnContainer}
                         initial="hidden"
                         animate="show"
-                        className="flex gap-4 sm:gap-8 md:gap-20 justify-center mt-10 sm:mt-12 md:mt-16 lg:mt-20"
+                        className="flex gap-4 sm:gap-8 md:gap-15 justify-center mt-10 sm:mt-12 md:mt-16 lg:mt-20"
                     >
                         <a
                             href="#contato"
@@ -95,7 +95,7 @@ const btnContainer = {
                             transition-colors duration-300
                             "
                         >
-                            Discuss a project
+                            Propose Partnership
                         </a>
 
                         <a
@@ -110,7 +110,7 @@ const btnContainer = {
                             transition-colors duration-300
                             "
                         >
-                            See my work
+                            View Products
                         </a>
                     </motion.div>
                 </motion.div>

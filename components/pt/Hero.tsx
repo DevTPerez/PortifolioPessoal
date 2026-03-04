@@ -63,31 +63,31 @@ const btnContainer = {
                         variants={textItem}
                         className="
                         text-center
-                        text-[24px] sm:text-[26px] md:text-[32px] lg:text-[40px]
+                        text-[24px] sm:text-[28px] md:text-[32px] lg:text-[48px]
                         leading-tight font-bold
                         mb-4 sm:mb-5 md:mb-6 lg:mb-6
                         "
                     >
-                        Transformo ideias em soluções digitais funcionais
+                        Soluções Digitais que Geram Resultados
                     </motion.h2>
                     <motion.p
                         variants={textItem}
-                        className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] mb-2 sm:mb-3 md:mb-4 lg:mb-2"
+                        className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] mb-2 sm:mb-3 md:mb-4 lg:mb-2"
                     >
                         Aplicações web, Android e plataformas sob medida.
                     </motion.p>
 
                     <motion.p
                         variants={textItem}
-                        className="text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] mb-4 sm:mb-5 md:mb-6 lg:mb-6"
+                        className="text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] mb-4 sm:mb-5 md:mb-6 lg:mb-6"
                     >
-                        Do conceito à entrega, soluções rápidas, robustas e escaláveis para o seu negócio.
+                        Explore nossos produtos ou proponha uma parceria estratégica.
                     </motion.p>      
                     <motion.div
                         variants={btnContainer}
                         initial="hidden"
                         animate="show"
-                        className="flex gap-4 sm:gap-8 md:gap-20 justify-center mt-10 sm:mt-12 md:mt-16 lg:mt-20"
+                        className="flex gap-4 sm:gap-8 md:gap-15 justify-center mt-10 sm:mt-12 md:mt-16 lg:mt-20"
                     >
                         <a
                             href="#contato"
@@ -96,12 +96,12 @@ const btnContainer = {
                             bg-white text-black
                             rounded-full border-[2px] border-black
                             font-semibold
-                            text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px]
+                            text-[12px] sm:text-[14px] md:text-[16px] lg:text-[20px]
                             hover:bg-gray-300
                             transition-colors duration-300
                             "
                         >
-                            Conversar sobre um projeto
+                            Propor Parceria
                         </a>
 
                         <a
@@ -111,12 +111,12 @@ const btnContainer = {
                             bg-black text-white
                             rounded-full border border-white
                             font-semibold
-                            text-[12px] sm:text-[14px] md:text-[16px] lg:text-[18px]
+                            text-[12px] sm:text-[14px] md:text-[16px] lg:text-[20px]
                             hover:bg-[#0E0E0E]
                             transition-colors duration-300
                             "
                         >
-                            Veja meu trabalho
+                            Ver Produtos
                         </a>
                     </motion.div>
                 </motion.div>
