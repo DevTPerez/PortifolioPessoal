@@ -39,7 +39,7 @@ export default function ComoPossoAjudar() {
             <div className="relative text-white flex w-full bg-[#0A0A0A] transition-all duration-300 ease-in-out py-[80px]">
                 <div className="flex    flex-col bg-[white]/5 w-full max-w-[1440px] py-[60px] px-[30px] mx-auto rounded-[25px] gap-[30px]">
                     
-                    <h2 className="text-[24px]  md:text-[26px] lg:text-[30px] font-bold">Como posso ajudar! </h2>
+                    <h2 className="text-[24px]  md:text-[26px] lg:text-[30px] font-bold">This is how I can help </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-[30px] w-full">
                         {icons.map(({ icon, title, description }, i) => {
