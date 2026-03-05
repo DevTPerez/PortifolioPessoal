@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { RocketIcon, Code, Handshake } from "lucide-react"
 
 const textH2 = {
   hidden: { opacity: 0, y: 30 },
@@ -14,49 +15,53 @@ const textH3 = {
 
 const cards = [
   {
-    id: 1,
+    id: 0,
     title: "Digital Solutions Architecture",
-    subtitle: "→ focus on performance and scalability",
+    subtitle: "→ focused on performance and scalability",
+    icon: <RocketIcon size={200}/>,
     description: (
       <p>
-        We create robust and scalable systems that grow alongside your business.
-        Each solution is designed to avoid rework, optimize resources, and enable
-        future integrations in a simple way. We ensure consistent performance,
-        security, and a solid foundation to support growing demands without
-        compromising the user experience.
+        We develop solutions with an architecture designed to scale from the start. 
+        Each project is structured to maintain high performance even as users, 
+        data, or features increase. We use modern technologies and a clear layer 
+        and service organization, ensuring stable systems that are easy to evolve 
+        and ready to scale as the business grows.
+      </p>
+    )
+  },
+  {
+    id: 1,
+    title: "Custom Development",
+    subtitle: "→ web, Android and integrations",
+    icon: <Code size={200}/>,
+    description: (
+      <p>
+        We build digital solutions tailored to the specific needs of each project. 
+        We create web and Android applications and system integrations, ensuring 
+        efficient communication across platforms. Each solution is designed with a 
+        focus on functionality, efficiency, and the ability to evolve alongside 
+        business growth.
       </p>
     )
   },
   {
     id: 2,
-    title: "Custom Development",
-    subtitle: "→ web, Android and integrations",
-    description: (
-      <p>
-        We develop customized applications that perfectly adapt to your company’s workflow.
-        Whether web, mobile, or system integrations, our solutions increase productivity,
-        reduce operational costs, and streamline internal processes, allowing you to focus
-        on strategic business growth.
-      </p>
-    )
-  },
-  {
-    id: 3,
     title: "Technical Partnership",
     subtitle: "→ startups and growing companies",
+    icon: <Handshake size={200}/>,
     description: (
       <p>
-        We act as a strategic technical arm, offering continuous support,
-        technology consulting, and guidance for critical decisions. Our partnership ensures
-        that your company uses the right technology at the right time, accelerating results,
-        mitigating risks, and maximizing innovation opportunities.
+        We act as a strategic technical partner, providing continuous support, 
+        technology consulting, and guidance on critical decisions. This partnership 
+        enables adopting the right technologies at each stage, accelerating results, 
+        and reducing risks in digital product development.
       </p>
     )
   }
-]
+];
 
 export default function Credibilidade() {
-  const [activeIndex, setActiveIndex] = useState(1)
+  const [activeIndex, setActiveIndex] = useState(0)
 
   const handleSelectIndex = (index: number) => {
     setActiveIndex(index)
@@ -72,7 +77,7 @@ export default function Credibilidade() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="text-[28px] md:text-[30px] lg:text-[34px] font-bold"
+            className="text-[24px] md:text-[30px] lg:text-[34px] font-bold"
           >
             Credibility & Innovation
           </motion.h2>
@@ -152,7 +157,7 @@ export default function Credibilidade() {
                       {card.description}
                     </p>
                     <span className="absolute bottom-0 right-10 text-[200px] font-bold text-white/10">
-                      {activeIndex}
+                      {card.icon}
                     </span>
                   </motion.div>
                 )

@@ -1,6 +1,7 @@
 "use client"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { RocketIcon, Code, Handshake} from "lucide-react"
 
 
 const textH2 = {
@@ -15,49 +16,52 @@ const textH3 = {
 
 const cards = [
   {
-    id: 1,
+    id: 0,
     title: "Arquitetura de soluções digitais",
     subtitle: "→ foco em performance e escalabilidade",
+    icon: <RocketIcon size={200}/>,
     description: (
       <p>
-        Criação sistemas robustos e escaláveis que crescem junto com o seu negócio.
-        Cada solução é pensada para evitar retrabalho, otimizar recursos e permitir
-        integrações futuras de forma simples. Garantimos desempenho consistente, 
-        segurança e uma base sólida para suportar demandas crescentes sem comprometer
-        a experiência do usuário.
+        Desenvolvemos soluções com arquitetura pensada para crescer desde o início. 
+        Cada projeto é estruturado para manter alta performance mesmo com aumento de usuários, 
+        dados ou funcionalidades. Utilizamos tecnologias modernas e uma organização clara de 
+        camadas e serviços, garantindo sistemas estáveis, fáceis de evoluir e preparados para 
+        escalar conforme o negócio cresce.
+      </p>
+    )
+  },
+  {
+    id: 1,
+    title: "Desenvolvimento sob medida",
+    subtitle: "→ web, Android e integrações",
+    icon: <Code size={200}/>,
+    description: (
+      <p>
+        Desenvolvemos soluções digitais sob medida, alinhadas às necessidades de cada projeto. 
+        Criamos aplicações web, Android e integrações entre sistemas, garantindo comunicação 
+        eficiente entre plataformas. Cada solução é pensada para oferecer funcionalidade, 
+        eficiência e capacidade de evolução ao longo do crescimento do negócio.
       </p>
     )
   },
   {
     id: 2,
-    title: "Desenvolvimento sob medida",
-    subtitle: "→ web, Android e integrações",
-    description: (
-      <p>
-        Desenvolvemos aplicações personalizadas que se adaptam perfeitamente ao fluxo
-        da sua empresa. Seja web, mobile ou integrações entre sistemas, nossas soluções
-        aumentam produtividade, reduzem custos operacionais e agilizam processos internos,
-        permitindo que você se concentre no crescimento estratégico do negócio.
-      </p>
-    )
-  },
-  {
-    id: 3,
     title: "Parceria técnica",
     subtitle: "→ startups e empresas em crescimento",
+    icon: <Handshake size={200}/>,
     description: (
       <p>
-        Atuamos como um braço técnico estratégico, oferecendo acompanhamento contínuo,
-        consultoria em tecnologia e suporte para decisões críticas. Nossa parceria garante
-        que sua empresa utilize a tecnologia certa no momento certo, acelerando resultados,
-        mitigando riscos e potencializando oportunidades de inovação.
+        Atuamos como um braço técnico estratégico, oferecendo acompanhamento contínuo, 
+        consultoria tecnológica e apoio em decisões críticas. A parceria permite adotar 
+        as tecnologias certas em cada fase, acelerar resultados e reduzir riscos no 
+        desenvolvimento de produtos digitais.
       </p>
     )
   }
 ]
 
 export default function Credibilidade() {
-  const [activeIndex, setActiveIndex] = useState(1)
+  const [activeIndex, setActiveIndex] = useState(0)
 
   const handleSelectIndex = (index: number) => {
     setActiveIndex(index)
@@ -73,7 +77,7 @@ export default function Credibilidade() {
                         initial="hidden"
                         whileInView="show"
                         viewport={{ once: true, amount: 0.3 }}
-                        className="text-[28px] md:text-[30px] lg:text-[34px] font-bold"
+                        className="text-[24px] md:text-[30px] lg:text-[34px] font-bold"
                     >
                         Credibilidade & Inovação
                     </motion.h2>
@@ -150,7 +154,7 @@ export default function Credibilidade() {
                                         {card.description}
                                     </p>
                                     <span className="absolute bottom-0 right-10 text-[200px] font-bold text-white/10">
-                                        {activeIndex}
+                                        {card.icon}
                                     </span>
                                     </motion.div>
                                 )
