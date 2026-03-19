@@ -16,8 +16,7 @@ export default function Contacts() {
     const [openPrivacy, setOpenPrivacy] = useState(false)
     const [consent, setConsent] = useState(false)
 
-    const { data, loading, success, error, handleChange, handleSubmit } =
-        useContactForm()
+    const { data, loading, success, error, handleChange, handleSubmit } = useContactForm()
 
     const canSubmit =
         consent &&
@@ -160,7 +159,7 @@ export default function Contacts() {
                         )}
 
 
-                            <label className="flex items-center gap-2 text-white/70 text-sm">
+                        <label className="flex items-center gap-2 text-white/70 text-sm">
                             <input
                                 type="checkbox"
                                 checked={consent}

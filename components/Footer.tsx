@@ -51,14 +51,11 @@ export default function Footer() {
           </motion.div>
 
           <motion.div variants={itemVariant} className="flex gap-6 items-center justify-center lg:justify-end w-full">
-            <a href="https://github.com/" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/DevTPerez" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
               <SiGithub className="text-[50px] cursor-pointer transition-transform hover:scale-110" />
             </a>
-            <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/tiagocostaperez/?skipRedirect=true" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
               <SiLinkedin className="text-[50px] cursor-pointer transition-transform hover:scale-110" />
-            </a>
-            <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-              <SiInstagram className="text-[50px] cursor-pointer transition-transform hover:scale-110" />
             </a>
           </motion.div>
 
