@@ -153,9 +153,9 @@ export default function Credibilidade() {
                       )
                     }
                   >
-                    <p className="flex text-[14px] sm:text-[16px] lg:text-[20px] my-auto text-[#cccccc] leading-relaxed">
+                    <div className="flex text-[14px] sm:text-[16px] lg:text-[20px] my-auto text-[#cccccc] leading-relaxed">
                       {card.description}
-                    </p>
+                    </div>
                     <span className="absolute bottom-0 right-10 text-[200px] font-bold text-white/10">
                       {card.icon}
                     </span>

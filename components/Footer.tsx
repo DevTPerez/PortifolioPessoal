@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { SiInstagram, SiLinkedin, SiGithub } from "react-icons/si"
+import { SiLinkedin, SiGithub } from "react-icons/si"
 import { Phone, Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
